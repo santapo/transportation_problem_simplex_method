@@ -39,7 +39,7 @@ def get_delta(bfs, costs, us, vs):
         for j, cost in enumerate(row):
             non_basic = all([p[0] != i or p[1] != j for p, v in bfs])
             if non_basic:
-                delta.append((i,j), us[i] + vs[j] - costs)
+                delta.append(((i,j), us[i] + vs[j] - cost))
                 
     return delta
 
